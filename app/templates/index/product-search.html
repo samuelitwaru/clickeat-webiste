@@ -1,0 +1,26 @@
+<section class="pt-3 pb-1 text-center container-fluid sticky-top rounded mb-4 shadow form-signin" style="background-image: linear-gradient(white, #f8f9fa);">
+	<form id="searchProductForm" method="GET" action="{{url_for('product.get_products')}}">
+		<div class="input-group input-group-lg">
+			<!-- <span class="input-group-text" id="inputGroup-sizing-lg">Search</span> -->
+			<input type="text" name="search" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Search Meal">
+			<button type="submit" class="btn btn-warning" type="button"><span class="fa fa-search"></span></button>
+		</div>
+	</form>
+</section>
+
+
+<script type="text/javascript">
+	$('#searchProductForm').submit((e)=>{
+		e.preventDefault()
+		showSpinnerModal()
+		form = $(e.target)
+		data = form.serialize()
+		action = form.attr("action") 
+		method = form.attr("method") 
+		console.log(data)
+		console.log(action)
+		console.log(method)
+		document.getElementById('products').scrollIntoView({behavior:"smooth"})
+		// hideSpinnerModal()
+	})
+</script>

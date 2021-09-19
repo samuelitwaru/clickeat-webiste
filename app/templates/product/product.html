@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+	{% include 'index/header.html' %}
+
+	<div class="container">
+		<!-- <div class="row g-4 py-5 row-cols-1 row-cols-lg-3"> -->
+        <div class="d-flex justify-content-center flex-wrap p-4">
+			<div class="width-300">
+			    <img class="card-img-top skeleton-loader-image" width="100%" src="" >
+			</div>
+
+			<div class="col-md-4 p-2">
+	            <p class="card-text skeleton-loader">{{product.name}}</p>
+	            <strike class="text-warning skeleton-loader">{{product.preprice}}</strike>
+	            <p><strong class="skeleton-loader">{{product.price}}</strong></p>
+	            <hr>
+		        <form>
+		        	<div>
+		        		<p>Quantity</p>
+						<input id="numberInput" class="number-input" type="number" name="number" min="1" max="10" data-target="#numberDisplay" hidden />
+						<div class="input-group mb-3">
+							<button class="btn btn-outline-secondary number-input-minus" data-number-input="#numberInput" type="button">-</button>
+							<div id="numberDisplay" class="number-input-display border border-dark text-center p-2 w-25">1</div>
+							<button class="btn btn-outline-secondary number-input-plus" data-number-input="#numberInput" type="button">+</button>
+						</div>
+					</div>
+	            	<p><strong class="skeleton-loader">{{product.price}}</strong></p>
+            		<button class="btn btn-primary hover-scale-2" type="submit">Order</button>
+	            </form>
+			</div>
+		</div>
+	</div>
+
+	{% include 'index/product-search.html' %}
+	{% include 'index/products.html' %}
+
+{% endblock %}

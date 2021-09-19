@@ -1,0 +1,28 @@
+<div class="modal" id="spinnerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-body text-center">
+            <div class="spinner-border text-warning" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <br>
+            Please wait
+        </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var options = {
+        backdrop: true,
+        keyboard: true,
+        focus: true
+    }
+    var myModal = new bootstrap.Modal(document.getElementById('spinnerModal'), options)
+    function showSpinnerModal(){
+    	myModal.show()
+    }
+    function hideSpinnerModal(){
+    	myModal.hide()
+    }
+</script>
