@@ -4,7 +4,8 @@
             <div class="width-300 my-2">
                 <div class="card shadow-sm">
                     <a href="{{url_for('product.get_product', product_id=1)}}">
-                        <img class="bd-placeholder-img card-img-top hover-scale hover-opaque" width="100%" src="{{url_for('static', filename='img/banner1.jpeg')}}" />
+                        <img data-loader="#imageLoader1" class="product-image bd-placeholder-img card-img-top hover-scale hover-opaque" width="100%" src="{{url_for('static', filename='img/banner1.jpeg')}}"  hidden="true"/>
+                        <div id="imageLoader1" class="skeleton-loader-image"></div> 
                     </a>
 
                     <div class="card-body">
@@ -21,7 +22,8 @@
             <div class="width-300 my-2">
                 <div class="card shadow-sm">
                     <a href="{{url_for('product.get_product', product_id=1)}}">
-                        <img class="bd-placeholder-img card-img-top hover-scale hover-opaque" width="100%" src="{{url_for('static', filename='img/banner2.jpg')}}" />
+                        <img data-loader="#imageLoader2" class="product-image bd-placeholder-img card-img-top hover-scale hover-opaque" width="100%" src="{{url_for('static', filename='img/banner2.jpg')}}" hidden="true"/>
+                        <div id="imageLoader2" class="skeleton-loader-image"></div>
                     </a>
 
                     <div class="card-body">
@@ -38,7 +40,8 @@
             <div class="width-300 my-2">
                 <div class="card shadow-sm">
                     <a href="{{url_for('product.get_product', product_id=1)}}">
-                        <img class="bd-placeholder-img card-img-top hover-scale hover-opaque skeleton-loader-image" width="100%" src="{{url_for('static', filename='img/banner3.jpg')}}" />
+                        <img data-loader="#imageLoader3" class="product-image bd-placeholder-img card-img-top hover-scale hover-opaque" width="100%" src="{{url_for('static', filename='img/banner3.jpg')}}" hidden="true" />
+                        <div id="imageLoader3" class="skeleton-loader-image"></div>
                     </a>
 
                     <div class="card-body">
